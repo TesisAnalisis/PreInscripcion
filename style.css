@@ -1,0 +1,324 @@
+/* ================================
+   RESET Y ESTILOS BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* ================================
+   HEADER PROFESIONAL
+================================ */
+header {
+    display: flex;
+    flex-direction: column;       /* Logo arriba, título abajo */
+    align-items: center;          /* Centrado horizontal */
+    padding: 25px 20px;           /* Espaciado generoso */
+    background: linear-gradient(90deg, #002855, #004080);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    height: 120px;
+    width: auto;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1.3;
+    max-width: 90%;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+}
+
+.hero h2,
+.hero .texto-principal {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 0 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    top: 25%;
+    font-weight: 800;
+}
+
+.hero .texto-principal {
+    font-size: 1.3rem;
+    top: 40%;
+    max-width: 800px;
+}
+
+.botones {
+    position: absolute;
+    bottom: 20%;
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.botones .btn {
+    background: #438dd6;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #002855;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.botones .btn:hover {
+    background: #002855;
+    transform: translateY(-3px);
+}
+
+/* ================================
+   HISTORIA / CARRUSEL
+================================ */
+.historia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background: #f4f4f4;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* La imagen se ajusta y se ve completa */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    border-radius: 15px;
+}
+
+.carousel img.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Flechas */
+.carousel button.prev,
+.carousel button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel button.prev:hover,
+.carousel button.next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.carousel button.prev { left: 10px; }
+.carousel button.next { right: 10px; }
+
+/* ================================
+   COMENTARIOS
+================================ */
+.comentarios {
+    padding: 50px 20px;
+    background: #eef2f7;
+    border-top: 4px solid #002855;
+}
+
+.comentarios h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #002855;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form .form-label {
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1px solid #004080;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+    background: #004080;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #002855;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background: #002855;
+    color: #fff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer .contacto {
+    margin-bottom: 15px;
+}
+
+footer h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+    header h1 { font-size: 1.6rem; }
+    .hero h2 { font-size: 2rem; }
+    .hero .texto-principal { font-size: 1.1rem; }
+    .botones { flex-direction: column; gap: 12px; bottom: 15%; }
+    .carousel { max-width: 700px; height: auto; }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    header img { height: 100px; }
+    header h1 { font-size: 1.4rem; }
+    .hero h2 { font-size: 1.5rem; }
+    .hero .texto-principal { font-size: 1rem; }
+    .botones { bottom: 12%; }
+    .carousel { max-width: 90%; height: 300px; }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    header img { height: 80px; }
+    header h1 { font-size: 1.2rem; }
+    .hero h2 { font-size: 1.2rem; }
+    .hero .texto-principal { font-size: 0.85rem; }
+    .carousel { max-width: 95%; height: 250px; }
+    .botones { gap: 10px; }
+}
+ 

@@ -1,0 +1,224 @@
+ /* ================================
+   RESET Y BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #eef2f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+.inscripcion {
+    max-width: 1000px;
+    width: 95%;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding-bottom: 25px;
+}
+
+/* ================================
+   HEADER
+================================ */
+.inscripcion header {
+    background: linear-gradient(135deg, #1e90ff, #0a3d62);
+    text-align: center;
+    padding: 30px 15px;
+    color: #fff;
+}
+
+.inscripcion header img {
+    max-width: 250px; /* tamaño grande pero ajustable */
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.inscripcion header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+/* ================================
+   TITULOS DE SECCION
+================================ */
+h2 {
+    margin: 25px 0 15px;
+    font-size: 1.4rem;
+    color: #0a3d62;
+    border-left: 6px solid #1e90ff;
+    padding-left: 12px;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+/* ================================
+   FORMULARIO
+================================ */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+    padding: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    word-wrap: break-word;
+}
+
+label {
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+}
+
+input, select, textarea {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #d1d9e6;
+    border-radius: 10px;
+    background: #f9fbfd;
+    transition: all 0.3s ease;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.3);
+    background: #fff;
+    outline: none;
+    transform: translateY(-1px);
+}
+
+/* ================================
+   SECCIONES COMO TARJETAS
+================================ */
+section h2 {
+    grid-column: span 2;
+    margin-top: 15px;
+}
+
+/* ================================
+   BOTÓN
+================================ */
+button {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #1e90ff, #0a74da);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(30, 144, 255, 0.3);
+    word-wrap: break-word;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0a74da, #084c8d);
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(30, 144, 255, 0.4);
+}
+
+/* ================================
+   RESPONSIVIDAD
+================================ */
+@media (max-width: 992px) {
+    form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .inscripcion header img {
+        max-width: 200px;
+    }
+
+    .inscripcion header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .inscripcion {
+        width: 95%;
+        border-radius: 12px;
+    }
+
+    .inscripcion header img {
+        max-width: 180px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input, select, textarea {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .inscripcion header img {
+        max-width: 150px;
+    }
+
+    .inscripcion header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    input, select, textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

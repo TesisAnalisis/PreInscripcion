@@ -1,0 +1,112 @@
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor principal */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Párrafos que contienen inputs */
+p {
+    margin: 15px 0;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Botones */
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Botón de eliminar (estilo especial) */
+form[action="eliminar_usuario.php"] button {
+    background-color: #d9534f;
+}
+
+form[action="eliminar_usuario.php"] button:hover {
+    background-color: #c9302c;
+}
+
+/* Imágenes de documentos */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Títulos de documentos */
+.profile-image-title {
+    margin-top: 25px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="number"],
+    input[type="file"] {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
